@@ -4,11 +4,13 @@ import "../App.css";
 import POD_BASE_URL from "../constants/constants"
 
 export default function photoOfDay(props) {
-const 
+    const {picture} = props
     return (
 
         <div className="photoOfDay-Section">
-            
+           {picture &&
+            <img src={picture.hdurl} alt={picture.title}/>
+           }
         </div>
     )
 }
